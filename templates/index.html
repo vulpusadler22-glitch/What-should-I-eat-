@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Should I Eat?</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.jpg') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Logo -->
+        <header>
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="App Logo" class="logo">
+            <h1>What Should I Eat?</h1>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Button to pick a meal -->
+            <button class="decide-btn" onclick="pickMeal()">
+                Click to Decide!
+            </button>
+
+            <!-- Display selected meal -->
+            <div class="meal-display" id="mealDisplay">
+                <p class="hint">Click the button above to get started!</p>
+            </div>
+
+            <!-- Try again button (hidden initially) -->
+            <button class="try-again-btn" onclick="pickMeal()" style="display:none;" id="tryAgainBtn">
+                Try Again
+            </button>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
